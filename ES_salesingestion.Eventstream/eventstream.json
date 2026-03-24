@@ -1,0 +1,66 @@
+{
+  "sources": [
+    {
+      "id": "2ea6e1fe-00df-4b83-8375-3c13a8042ec2",
+      "name": "new-source",
+      "type": "AzureEventHub",
+      "properties": {
+        "dataConnectionId": "d2f16cc5-3c59-4890-bbb3-e5be86052713",
+        "consumerGroupName": "$Default",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "625526c2-eb3c-40f4-8f91-726d55c169ed",
+      "name": "Lakehouse",
+      "type": "Lakehouse",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "675eb702-998c-b4ff-4363-694d85f1ab87",
+        "schema": "bronze",
+        "deltaTable": "fact_sales_raw",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "pc-store-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "pc-store-stream",
+          "schema": {
+            "columns": []
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "3408ee85-ae67-4e6d-b750-4abfa7cf46b3",
+      "name": "pc-store-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "new-source"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

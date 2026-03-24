@@ -1,0 +1,96 @@
+table bronze_ingestion_log
+	lineageTag: 712dbb22-909f-48ec-be53-8823c476d2ca
+	sourceLineageTag: [dbo].[bronze_ingestion_log]
+
+	column v_table_name
+		dataType: string
+		lineageTag: 37456904-9d59-47e5-877d-3d62b3ca60ec
+		sourceLineageTag: v_table_name
+		summarizeBy: none
+		sourceColumn: v_table_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column pipeline_run_id
+		dataType: string
+		lineageTag: df92bacc-e054-4691-b38d-114e2ee6d88e
+		sourceLineageTag: pipeline_run_id
+		summarizeBy: none
+		sourceColumn: pipeline_run_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_name
+		dataType: string
+		lineageTag: ff6cc56d-f7ad-421f-b93c-f01035689f71
+		sourceLineageTag: activity_name
+		summarizeBy: none
+		sourceColumn: activity_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: b3ddc72d-2973-4073-bd9d-688a4a77d566
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column rows_read
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c9d8e23-28f3-4c1f-b739-2ee4dcf88cc1
+		sourceLineageTag: rows_read
+		summarizeBy: sum
+		sourceColumn: rows_read
+
+		annotation SummarizationSetBy = Automatic
+
+	column rows_written
+		dataType: int64
+		formatString: 0
+		lineageTag: bf279306-382e-4bd0-b34e-b9981ae1d6da
+		sourceLineageTag: rows_written
+		summarizeBy: sum
+		sourceColumn: rows_written
+
+		annotation SummarizationSetBy = Automatic
+
+	column error_message
+		dataType: string
+		lineageTag: 2510666d-f7b5-4060-a856-e0f3e71d631d
+		sourceLineageTag: error_message
+		summarizeBy: none
+		sourceColumn: error_message
+
+		annotation SummarizationSetBy = Automatic
+
+	column execution_start_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e3eece0a-5cb8-4427-9526-107b51af4866
+		sourceLineageTag: execution_start_time
+		summarizeBy: none
+		sourceColumn: execution_start_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column execution_end_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e7b8b9a8-56a8-4b04-a65c-d8eec753eef0
+		sourceLineageTag: execution_end_time
+		summarizeBy: none
+		sourceColumn: execution_end_time
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bronze_ingestion_log = entity
+		mode: directLake
+		source
+			entityName: bronze_ingestion_log
+			schemaName: dbo
+			expressionSource: 'DirectLake - house'
+

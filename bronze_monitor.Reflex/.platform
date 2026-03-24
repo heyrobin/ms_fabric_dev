@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Reflex",
+    "displayName": "bronze_monitor"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "86b7217d-8c51-b1f4-49b7-b7f839177727"
+  }
+}

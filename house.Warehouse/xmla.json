@@ -1,0 +1,342 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "bronze_ingestion_log",
+        "sourceLineageTag": "[dbo].[bronze_ingestion_log]",
+        "columns": [
+          {
+            "name": "v_table_name",
+            "dataType": "string",
+            "sourceColumn": "v_table_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "v_table_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "pipeline_run_id",
+            "dataType": "string",
+            "sourceColumn": "pipeline_run_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "pipeline_run_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "activity_name",
+            "dataType": "string",
+            "sourceColumn": "activity_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "activity_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "status",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "rows_read",
+            "dataType": "int64",
+            "sourceColumn": "rows_read",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "rows_read",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "rows_written",
+            "dataType": "int64",
+            "sourceColumn": "rows_written",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "rows_written",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "error_message",
+            "dataType": "string",
+            "sourceColumn": "error_message",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "error_message",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "execution_start_time",
+            "dataType": "dateTime",
+            "sourceColumn": "execution_start_time",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "execution_start_time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "execution_end_time",
+            "dataType": "dateTime",
+            "sourceColumn": "execution_end_time",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "execution_end_time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "bronze_ingestion_log",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "bronze_ingestion_log_2",
+        "sourceLineageTag": "[dbo].[bronze_ingestion_log_2]",
+        "columns": [
+          {
+            "name": "v_table_name",
+            "dataType": "string",
+            "sourceColumn": "v_table_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "v_table_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "pipeline_id",
+            "dataType": "string",
+            "sourceColumn": "pipeline_id",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "pipeline_id",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "activity_name",
+            "dataType": "string",
+            "sourceColumn": "activity_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "activity_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "status",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "rows_read",
+            "dataType": "int64",
+            "sourceColumn": "rows_read",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "rows_read",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "rows_written",
+            "dataType": "int64",
+            "sourceColumn": "rows_written",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "rows_written",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "error_message",
+            "dataType": "string",
+            "sourceColumn": "error_message",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "error_message",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "execution_start_time",
+            "dataType": "dateTime",
+            "sourceColumn": "execution_start_time",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "execution_start_time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "execution_end_time",
+            "dataType": "dateTime",
+            "sourceColumn": "execution_end_time",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "execution_end_time",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "bronze_ingestion_log_2",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "ES_salesingestion"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9cc9189e-bec2-90cb-423c-41c2e285ef59"
+  }
+}
